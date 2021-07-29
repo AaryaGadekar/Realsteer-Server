@@ -21,14 +21,19 @@ while True:
     data, addr = sock.recvfrom(1024) # buffer size is 1024 bytes
     data = data.decode('UTF-8')
     data = data[1:-1].split(',')
-    steering = (round((float(data[0][1:-1])),4))
-    if (steering > 0.6):
-        steering = 0.6
-    elif (steering < -0.6):
-        steering = -0.6
 
-    accelerator = ((data[1][1:-1]))
-    brake = ((data[2][1:-1]))
+    if (data==None):
+        steering = 0
+        accelerator = 'false'
+        brake = 'false'
+    else:
+        steering = (round((float(data[0][1:-1])),4))
+        if (steering > 0.6):
+            steering = 0.6
+        elif (steering < -0.6):
+            steering = -0.6
+        accelerator = ((data[1][1:-1]))
+        brake = ((data[2][1:-1]))
     if(accelerator == 'true'):
         gamepad.right_trigger(value=255)
     else:
