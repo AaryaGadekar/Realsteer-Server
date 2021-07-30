@@ -1,6 +1,6 @@
 # Description✏️
 
-This repository holds the code for the client side of the [iOS](<[https://github.com/AaryaGadekar/udp-gamepad-ios](https://github.com/AaryaGadekar/udp-gamepad-ios)>) app. Works by plugging accelerometer data received via UDP into an emulated gamepad.
+This repository holds the code for the client side of the [iOS](https://github.com/AaryaGadekar/udp-gamepad-ios) app. Works by plugging accelerometer data received via UDP into an emulated gamepad.
 
 **Currently only supports Windows.**
 
@@ -30,4 +30,4 @@ This repository holds the code for the client side of the [iOS](<[https://github
 
         Running on IP: 192.168.0.152 and port 50000
 
-5.  View repository for instructions to run the [iOS](<[https://github.com/AaryaGadekar/udp-gamepad-ios](https://github.com/AaryaGadekar/udp-gamepad-ios)>) app with the given IP and port
+5.  View repository for instructions to run the [iOS](https://github.com/AaryaGadekar/udp-gamepad-ios) app with the given IP and port
