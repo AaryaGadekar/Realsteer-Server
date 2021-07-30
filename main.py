@@ -96,10 +96,15 @@ def getNewValue(n):
 def main():
     my_parser = argparse.ArgumentParser()
     my_parser.version = '1.0'
-    my_parser.add_argument('port', default=50000, const=50000, nargs='?')
-    my_parser.add_argument('sensitivity', default=0.6, const=0.6, nargs='?')
+    my_parser.add_argument('--port', default=50000,
+                           const=50000, type=int, nargs='?', help='set custom port number; default:50000')
+    my_parser.add_argument('--sensitivity', default=0.6,
+                           const=0.6, type=int, nargs='?', help='Set custom sensitivity (0 to 1); default:0.6')
     args = my_parser.parse_args()
+
     net.storePort(int(args.port))
+    print(
+        f'Running on IP: {str(socket.gethostbyname(socket.gethostname()))} and port {net.udp_port}')
     net.processData()
 
 
