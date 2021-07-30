@@ -99,10 +99,11 @@ def main():
     my_parser.add_argument('--port', default=50000,
                            const=50000, type=int, nargs='?', help='set custom port number; default:50000')
     my_parser.add_argument('--sensitivity', default=0.6,
-                           const=0.6, type=int, nargs='?', help='Set custom sensitivity (0 to 1); default:0.6')
+                           const=0.6, type=float, nargs='?', help='Set custom sensitivity (0 to 1); default:0.6')
     args = my_parser.parse_args()
 
     net.storePort(int(args.port))
+    net.storeSens(float(args.sensitivity))
     print(
         f'Running on IP: {str(socket.gethostbyname(socket.gethostname()))} and port {net.udp_port}')
     net.processData()
