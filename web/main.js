@@ -5,6 +5,7 @@ function startListening(){
 
 var count = 0
 
+
 function interfacePython(){
     if (count == 0){
         startListening()
@@ -30,7 +31,6 @@ function interfacePython(){
 
 function termPy(){
     var sens = document.getElementById("sens").value
-    console.log(sens)
     eel.togglePython(sens)
 }
 
@@ -39,4 +39,14 @@ function showOutput(out){
     document.getElementById("text").style.display='block';
     document.getElementById("text").innerHTML = out;
 
+}
+
+eel.expose(updateIP);
+function updateIP(ip){
+    document.getElementById("ipField").value = ip
+}
+
+eel.expose(rotateImage);
+function rotateImage(angleinDegrees){
+    document.getElementById("wheel").style.transform = `rotate(${angleinDegrees}deg)`
 }

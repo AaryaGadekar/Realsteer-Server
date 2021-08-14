@@ -86,9 +86,10 @@ class NetworkInfo:
                     else:
                         gamepad.left_trigger(value=0)
 
-                    print(f"Accelerator:{accelerator}")
-                    print(f"Brake:{brake}")
-                    print(f"Steering:{getNewValue(steering)}")
+                    # print(f"Accelerator:{accelerator}")
+                    # print(f"Brake:{brake}")
+                    # print(f"Steering:{getNewValue(steering)}")
+                    eel.rotateImage(getAngle(steering)-90)
                     gamepad.left_joystick_float(x_value_float=getNewValue(
                         steering), y_value_float=0)  # values between -1.0 and 1.0
                     gamepad.update()
@@ -104,6 +105,13 @@ net = NetworkInfo()
 def getNewValue(n):
     oldRange = (net.sens+net.sens)  # oldMax -Oldmin
     newRange = (1+1)  # newMax - newMin
+    newValue = (((n + net.sens)*newRange)/oldRange) - 1
+    return newValue
+
+
+def getAngle(n):
+    oldRange = (net.sens+net.sens)  # oldMax -Oldmin
+    newRange = (90+90)  # newMax - newMin
     newValue = (((n + net.sens)*newRange)/oldRange) - 1
     return newValue
 
@@ -129,10 +137,10 @@ def main(sens):
     net.storePort(int(50000))
     if (sens != None):
         net.storeSens(float(sens))
-
     startThread()
 
 
 # if __name__ == '__main__':
+eel.updateIP(str(net.UDP_IP))
 eel.start('index.html', size=(1000, 600))
 # main()
