@@ -16,7 +16,7 @@
 <body>
   <script src="script.js"></script>
   <nav>
-    <h1>Realsteer <span id="red">Companion</span> </h1>
+    <h1>Realsteer <span id="red">Server</span> </h1>
   </nav>
 
   <div class="body">
@@ -26,8 +26,7 @@
     <input type="text" disabled='true' placeholder="50000"><br><br>
     <label>Sensitivity (0 to 1)</label>
     <input id="sens" type="text" placeholder="0.6" value="0.6"><br><br>
-    <button class="btn btn-primary" onclick="startListening()">Start Listening</button>
-    <button class="btn btn-primary" onclick="termPy()">Stop Listening</button>
+    <button class="btn btn-primary" id="toggleButton"onclick="interfacePython()">Start Listening</button>
   </div>
   
   <div id="text" class="output"></div>
