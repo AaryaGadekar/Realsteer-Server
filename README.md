@@ -6,7 +6,8 @@ This repository holds the code for the client side of the [iOS](https://github.c
 
 # Requirements✔️
 
-1. **vgamepad**
+1. **Python 3.0+**
+2. **vgamepad**
 
 # Installation💽
 
