@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/eel.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>RealSteer Server</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <nav>
+    <h1>Realsteer <span id="red">Server</span> </h1>
+  </nav>
+  <div class="container">
+    <div class="body">
+      <label>IP Address</label>
+      <input type="text" disabled='true' id="ipField" placeholder="0.0.0.0"><br><br>
+      <label>Port Number</label>
+      <input type="text" disabled='true' placeholder="50000"><br><br>
+      <label>Sensitivity (higher is less sensitive)</label>
+      <input id="sens" type="text" placeholder="0.6" value="0.6"><br><br>
+      <button class="btn btn-primary" id="toggleButton"onclick="interfacePython()">Start Listening</button>
+    </div>
+    
+    <img src="wheel.png" class="wheel" id="wheel" alt="wheellmao" srcset="">
+
+  </div>
+  
+  
+  <div id="text" class="output"></div>
+
+
+</body>
+
+</html>

@@ -1,11 +1,18 @@
-import time
-from os import terminal_size
-import socket
-from typing import Sized
-import vgamepad as vg
-import argparse
-import threading
 import eel
+import threading
+import argparse
+import vgamepad as vg
+from typing import Sized
+import socket
+from os import terminal_size
+import time
+if getattr(sys, 'frozen', False):
+    # we are running in a |PyInstaller| bundle
+    basedir = sys._MEIPASS
+else:
+    # we are running in a normal Python environment
+    basedir = os.path.dirname(__file__),
+
 
 eel.init('web')
 
