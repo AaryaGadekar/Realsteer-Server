@@ -4,14 +4,15 @@ import argparse
 import vgamepad as vg
 from typing import Sized
 import socket
+import os
 from os import terminal_size
 import time
-if getattr(sys, 'frozen', False):
-    # we are running in a |PyInstaller| bundle
-    basedir = sys._MEIPASS
-else:
-    # we are running in a normal Python environment
-    basedir = os.path.dirname(__file__),
+# if getattr(sys, 'frozen', False):
+#     # we are running in a |PyInstaller| bundle
+#     basedir = sys._MEIPASS
+# else:
+#     # we are running in a normal Python environment
+#     basedir = os.path.dirname(__file__),
 
 
 eel.init('web')
@@ -149,5 +150,10 @@ def main(sens):
 
 # if __name__ == '__main__':
 eel.updateIP(str(net.UDP_IP))
-eel.start('index.html', size=(1000, 600))
+
+try:
+    eel.start('index.html', size=(1000, 600))
+except (SystemExit, MemoryError, KeyboardInterrupt):
+    # Handle errors and the potential hanging python.exe process
+    os.system('taskkill /F /IM python.exe /T')
 # main()
