@@ -1,5 +1,5 @@
 <p align="center">
-<a href="realsteer.aaryadoes.tech"><img src="https://i.ibb.co/zhRN8hR/image.png"/></a>
+<a href="https://realsteer.aaryadoes.tech"><img src="https://i.ibb.co/zhRN8hR/image.png"/></a>
 <h1 align="center">Realsteer-Server</h1>
 <h4 align="center">Transform your iPhone into a racing wheel for use on all racing games on PC</h4>
 
