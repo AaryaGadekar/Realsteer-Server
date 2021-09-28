@@ -82,5 +82,5 @@ Running on IP: 192.168.X.XXX and port XXXXX
 # Like the app?
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/aaryagadekar)
-<a href="https://www.qries.com/"><img src="https://i.ibb.co/zhRN8hR/image.png" style="width:100px"></img></a>
+<a href="https://www.qries.com/"><img src="https://i.ibb.co/zhRN8hR/image.png" style="width:150px"></img></a>
 
