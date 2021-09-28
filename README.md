@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.ibb.co/zhRN8hR/image.png" />
+<a href="realsteer.aaryadoes.tech"><img src="https://i.ibb.co/zhRN8hR/image.png"/></a>
 <h1 align="center">Realsteer-Server</h1>
 <h4 align="center">Transform your iPhone into a racing wheel for use on all racing games on PC</h4>
 
@@ -81,6 +81,5 @@ Running on IP: 192.168.X.XXX and port XXXXX
 
 # Like the app?
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/aaryagadekar)
-<a href="https://realsteer.aaryadoes.tech"><img src="https://i.ibb.co/zhRN8hR/image.png" style="width:150px"></img></a>
+<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="aaryagadekar" data-description="Support me on Buy me a coffee!" data-message="Thanks! You are amazing!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
