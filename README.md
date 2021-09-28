@@ -1,3 +1,8 @@
+<p align="center">
+<img style="width:50px;" src="https://i.ibb.co/zhRN8hR/image.png" />
+<h1 align="center">Realsteer-Server</h1>
+<h4 align="center">Transform your iPhone into a racing wheel for use on all racing games on PC</h4>
+
 # Description✏️
 
 This repository holds the code for the client side of the [iOS](https://github.com/AaryaGadekar/udp-gamepad-ios) app. Works by plugging accelerometer data received via UDP into an emulated gamepad.
@@ -72,7 +77,7 @@ This repository holds the code for the client side of the [iOS](https://github.c
 
 The program should output the following if installed correctly:
 
-    Running on IP: 192.168.X.XXX and port XXXXX
+Running on IP: 192.168.X.XXX and port XXXXX
 
 # Like the app?
 
