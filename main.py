@@ -1,18 +1,27 @@
+import time
+import webbrowser
+import os
+from os import terminal_size
+import socket
+from typing import Sized
 import eel
 import threading
 import argparse
-import vgamepad as vg
-from typing import Sized
-import socket
-import os
-from os import terminal_size
-import time
-# if getattr(sys, 'frozen', False):
-#     # we are running in a |PyInstaller| bundle
-#     basedir = sys._MEIPASS
-# else:
-#     # we are running in a normal Python environment
-#     basedir = os.path.dirname(__file__),
+import struct
+
+
+def Is64Windows():
+    return 'PROGRAMFILES(X86)' in os.environ
+
+
+try:
+    import vgamepad as vg
+except(Exception):
+    if (Is64Windows()):
+        os.startfile('ViGEmBusSetup_x64.msi')
+    else:
+        os.startfile('ViGEmBusSetup_x86.msi')
+    pass
 
 
 eel.init('web')
@@ -148,12 +157,10 @@ def main(sens):
     startThread()
 
 
-# if __name__ == '__main__':
 eel.updateIP(str(net.UDP_IP))
 
 try:
     eel.start('index.html', size=(1000, 600))
-except (SystemExit, MemoryError, KeyboardInterrupt):
-    # Handle errors and the potential hanging python.exe process
+
+except(SystemExit, MemoryError, KeyboardInterrupt):
     os.system('taskkill /F /IM python.exe /T')
-# main()
